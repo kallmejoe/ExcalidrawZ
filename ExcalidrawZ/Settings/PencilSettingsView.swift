@@ -45,6 +45,21 @@ struct PencilSettingsView: View {
             }
         }
         
+#if os(iOS)
+        Section {
+            Toggle(isOn: $toolState.palmRejectionEnabled) {
+                Text(.localizable(.applePencilPalmRejection))
+            }
+            .onChange(of: toolState.palmRejectionEnabled) { _ in
+                toolState.syncPalmRejectionToWebView()
+            }
+        } footer: {
+            Text(.localizable(.applePencilPalmRejectionDescription))
+                .font(.footnote)
+                .foregroundStyle(.secondary)
+        }
+#endif
+        
         
         Section {
             Toggle(isOn: Binding {

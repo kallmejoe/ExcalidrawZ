@@ -70522,6 +70522,232 @@
           }
         }
       }
+    },
+    "applePencilPalmRejection": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Palm Rejection"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "手掌拒绝"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "手掌拒絕"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "パームリジェクション"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Handballenunterdrückung"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rejet de la paume"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rechazo de palma"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "손바닥 거부"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Отклонение ладони"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rejeição de palma"
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "رفض الكف"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "पाम रिजेक्शन"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rifiuto del palmo"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Handpalm afwijzing"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odrzucanie dłoni"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "การปฏิเสธฝ่ามือ"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avuç içi reddi"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Từ chối lòng bàn tay"
+          }
+        }
+      }
+    },
+    "applePencilPalmRejectionDescription": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "When enabled, finger touches are ignored while drawing with Apple Pencil. Two-finger gestures for pan and zoom are still allowed."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启用后，使用 Apple Pencil 绘图时将忽略手指触摸。仍然允许双指平移和缩放手势。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "啟用後，使用 Apple Pencil 繪圖時將忽略手指觸摸。仍然允許雙指平移和縮放手勢。"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "有効にすると、Apple Pencilで描画中の指のタッチが無視されます。2本指でのパン・ズームジェスチャーは引き続き使用できます。"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wenn aktiviert, werden Fingertipps beim Zeichnen mit dem Apple Pencil ignoriert. Zwei-Finger-Gesten für Schwenken und Zoomen sind weiterhin erlaubt."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lorsqu'il est activé, les touches des doigts sont ignorées lors du dessin avec l'Apple Pencil. Les gestes à deux doigts pour le panoramique et le zoom sont toujours autorisés."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cuando está activado, los toques con los dedos se ignoran al dibujar con Apple Pencil. Los gestos de dos dedos para desplazamiento y zoom siguen estando permitidos."
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "활성화하면 Apple Pencil로 그리는 동안 손가락 터치가 무시됩니다. 이동 및 확대/축소를 위한 두 손가락 제스처는 계속 허용됩니다."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "При включении касания пальцев игнорируются во время рисования Apple Pencil. Жесты двумя пальцами для панорамирования и масштабирования по-прежнему разрешены."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quando ativado, os toques com os dedos são ignorados ao desenhar com o Apple Pencil. Os gestos de dois dedos para panorâmica e zoom ainda são permitidos."
+          }
+        },
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "عند التفعيل، يتم تجاهل لمسات الأصابع أثناء الرسم باستخدام Apple Pencil. لا تزال إيماءات الإصبعين للتنقل والتكبير مسموحًا بها."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "सक्षम होने पर, Apple Pencil से ड्राइंग करते समय उंगली के स्पर्श को अनदेखा किया जाता है। पैन और ज़ूम के लिए दो-उंगली इशारे अभी भी अनुमत हैं।"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se abilitato, i tocchi con le dita vengono ignorati durante il disegno con Apple Pencil. I gesti a due dita per la panoramica e lo zoom sono ancora consentiti."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wanneer ingeschakeld, worden vingertouches genegeerd tijdens het tekenen met Apple Pencil. Twee-vinger gebaren voor pannen en zoomen zijn nog steeds toegestaan."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gdy jest włączone, dotyki palcami są ignorowane podczas rysowania za pomocą Apple Pencil. Gesty dwoma palcami do przesuwania i powiększania są nadal dozwolone."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เมื่อเปิดใช้งาน การสัมผัสด้วยนิ้วจะถูกละเว้นขณะวาดด้วย Apple Pencil ยังคงอนุญาตให้ใช้ท่าทางสองนิ้วสำหรับการเลื่อนและการซูม"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Etkinleştirildiğinde, Apple Pencil ile çizim yaparken parmak dokunuşları yoksayılır. Kaydırma ve yakınlaştırma için iki parmak hareketleri hâlâ izin verilir."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Khi được bật, các chạm ngón tay sẽ bị bỏ qua khi vẽ bằng Apple Pencil. Các cử chỉ hai ngón tay để kéo và thu phóng vẫn được cho phép."
+          }
+        }
+      }
     }
   },
   "version": "1.0"

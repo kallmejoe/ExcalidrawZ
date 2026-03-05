@@ -23,6 +23,10 @@ class ExcalidrawWebView: WKWebView {
     }
     var toolbarActionHandler: (ToolbarActionKey) -> Void
     
+#if canImport(UIKit)
+    var palmRejectionEnabled: Bool = false
+#endif
+    
     init(
         frame: CGRect,
         configuration: WKWebViewConfiguration,
@@ -39,6 +43,54 @@ class ExcalidrawWebView: WKWebView {
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 #if canImport(UIKit)
     override var safeAreaInsets: UIEdgeInsets { .zero }
+    
+    private func filteredTouches(from touches: Set<UITouch>) -> Set<UITouch>? {
+        let pencilTouches = touches.filter { $0.type == .pencil }
+        let fingerTouches = touches.filter { $0.type != .pencil }
+        if !pencilTouches.isEmpty {
+            return Set(pencilTouches)
+        } else if fingerTouches.count >= 2 {
+            return Set(fingerTouches)
+        }
+        // single finger touch with no pencil = palm, drop it
+        return nil
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard palmRejectionEnabled else {
+            super.touchesBegan(touches, with: event)
+            return
+        }
+        guard let filtered = filteredTouches(from: touches) else { return }
+        super.touchesBegan(filtered, with: event)
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard palmRejectionEnabled else {
+            super.touchesMoved(touches, with: event)
+            return
+        }
+        guard let filtered = filteredTouches(from: touches) else { return }
+        super.touchesMoved(filtered, with: event)
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard palmRejectionEnabled else {
+            super.touchesEnded(touches, with: event)
+            return
+        }
+        guard let filtered = filteredTouches(from: touches) else { return }
+        super.touchesEnded(filtered, with: event)
+    }
+    
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard palmRejectionEnabled else {
+            super.touchesCancelled(touches, with: event)
+            return
+        }
+        guard let filtered = filteredTouches(from: touches) else { return }
+        super.touchesCancelled(filtered, with: event)
+    }
 #endif
     
 #if canImport(AppKit)
