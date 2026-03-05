@@ -298,6 +298,7 @@ final class ToolState: ObservableObject {
     }
 
     @AppStorage("PencilInteractionMode") var pencilInteractionMode: PencilInteractionMode = .fingerSelect
+    @AppStorage("palmRejectionEnabled") var palmRejectionEnabled: Bool = true
     
     func setActivedTool(_ tool: ExcalidrawTool?, animation: Animation? = .smooth) {
         withAnimation(animation) {
@@ -368,6 +369,11 @@ final class ToolState: ObservableObject {
         if pencilConnected || !enabled {
             try await excalidrawWebCoordinator?.connectPencil(enabled: enabled)
         }
+    }
+    
+    @MainActor
+    func syncPalmRejectionToWebView() {
+        excalidrawWebCoordinator?.webView.palmRejectionEnabled = inPenMode && palmRejectionEnabled
     }
     
     func toggleToolLock() {

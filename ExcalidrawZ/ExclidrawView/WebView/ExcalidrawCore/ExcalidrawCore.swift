@@ -619,6 +619,9 @@ window.excalidrawZHelper.exportElementsToBlob(
     @MainActor
     func togglePenMode(enabled: Bool) async throws {
         try await webView.evaluateJavaScript("window.excalidrawZHelper.togglePenMode(\(enabled)); 0;")
+#if canImport(UIKit)
+        parent?.toolState.syncPalmRejectionToWebView()
+#endif
     }
     @MainActor
     public func toggleActionsMenu(isPresented: Bool) async throws {
